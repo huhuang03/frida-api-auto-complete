@@ -1,0 +1,3 @@
+在webstorm里面编辑。注入的script跑在app进程里面，没有自动补全，这个是自动补全
+
+* Install

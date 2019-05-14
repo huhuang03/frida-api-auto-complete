@@ -55,5 +55,11 @@ class NativePointer {
 class Java {
     static perform(func);
     
-    static use(pkg: String);
+    static use(pkg: String): Class;
+
+    static cast(obj, clazz: Class);
+}
+
+class Class {
+
 }

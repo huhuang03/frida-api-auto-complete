@@ -1,3 +1,4 @@
-在webstorm里面编辑。注入的script跑在app进程里面，没有自动补全，这个是自动补全
+This is for auto complete for frida script
 
-* Install
+* Install in vs code
+In your vs project, create globals.d.ts and copy the api.d.ts content to it. Done.

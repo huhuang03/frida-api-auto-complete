@@ -1,0 +1,21 @@
+{
+  "name": "frida-api-auto-complete",
+  "version": "1.0.0",
+  "description": "在webstorm里面编辑。注入的script跑在app进程里面，没有自动补全，这个是自动补全",
+  "main": "api.ts",
+  "scripts": {
+    "build": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huhuang03/frida-api-auto-complete.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huhuang03/frida-api-auto-complete/issues"
+  },
+  "homepage": "https://github.com/huhuang03/frida-api-auto-complete#readme"
+}

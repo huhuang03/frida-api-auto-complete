@@ -1,20 +1,16 @@
-class Thread {
-    static backtrace(context, backtracer)
-}
-
-class Backtracer {
+declare class Backtracer {
     static ACCURATE
 }
 
-class DebugSymbol {
+declare class DebugSymbol {
     static fromAddress
 }
 
-class Interceptor {
+declare class Interceptor {
     static attach(target: string, callbacks);
 }
 
-class Process {
+declare class Process {
     id: number;
     static enumerateModules(): Module[];
     static isDebuggerAttached(): boolean;
@@ -23,36 +19,33 @@ class Process {
     static findModuleByName(name: String): Module;
 }
 
-class Module {
+declare class Module {
     name: string;
     path: string;
     base: NativePointer;
-    static findExportByName(moduleName: string, exportName: string): string
+    static findExportByName(moduleName: string, declareName: string): string
 }
 
-class NativePointer {
-
-}
-
-class Thread {
+declare class Thread {
     id: number;
     state: string;
+    static backtrace(context, backtracer)
 }
 
 
-class NativePointer {
-    readCString(size = -1);
+declare class NativePointer {
+    readCString(size:number): string;
 
-    readUtf8String(size = -1);
+    readUtf8String(size: number): string;
 
-    readUtf16String(size = -1);
+    readUtf16String(size: number): string;
 
-    readAnsiString(size = -1);
+    readAnsiString(size: number): string;
 }
 
 
 // Java
-class Java {
+declare class Java {
     static perform(func);
     
     static use(pkg: String): Class;
@@ -60,6 +53,6 @@ class Java {
     static cast(obj, clazz: Class);
 }
 
-class Class {
+declare class Class {
 
 }

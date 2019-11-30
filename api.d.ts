@@ -7,7 +7,10 @@ declare class DebugSymbol {
 }
 
 declare class Interceptor {
-    static attach(target: string, callbacks);
+    static attach(target: string, callbacks: {
+        onEnter: (args: [NativePointer])=>void;
+        onLeave: ()=>void;
+    });
 }
 
 declare class Process {

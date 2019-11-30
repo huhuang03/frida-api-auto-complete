@@ -44,6 +44,8 @@ declare class NativePointer {
     readUtf16String(size: number): string;
 
     readAnsiString(size: number): string;
+    
+    isNull(): boolean;
 }
 
 

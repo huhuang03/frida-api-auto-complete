@@ -37,6 +37,8 @@ declare class Thread {
 
 
 declare class NativePointer {
+    readPointer(): NativePointer;
+    
     readCString(size:number): string;
 
     readUtf8String(size: number): string;

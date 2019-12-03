@@ -63,3 +63,5 @@ declare class Java {
 declare class Class {
 
 }
+
+function send(obj: any);

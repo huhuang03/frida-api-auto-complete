@@ -37,6 +37,18 @@ declare class Thread {
 
 
 declare class NativePointer {
+    readS8(): number;
+    readU8(): number;
+    readS16(): number;
+    readU16(): number;
+    readS32(): number;
+    readU32(): number;
+    readShort(): number;
+    readUShort(): number;
+    readInt(): number;
+    readUInt(): number;
+    readFloat(): number;
+    readDouble(): number;
     readPointer(): NativePointer;
     
     readCString(size:number): string;

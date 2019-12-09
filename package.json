@@ -2,7 +2,7 @@
   "name": "frida-api-auto-complete",
   "version": "1.0.0",
   "description": "for frida script auto complte",
-  "main": "api.ts",
+  "main": "globals.d.ts",
   "scripts": {
     "build": "",
     "test": "echo \"Error: no test specified\" && exit 1"

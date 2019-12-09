@@ -56,3 +56,5 @@ declare class Java {
 declare class Class {
 
 }
+
+declare function ptr(address: string);

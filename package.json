@@ -1,7 +1,7 @@
 {
   "name": "frida-api-auto-complete",
   "version": "1.0.0",
-  "description": "在webstorm里面编辑。注入的script跑在app进程里面，没有自动补全，这个是自动补全",
+  "description": "for frida script auto complte",
   "main": "api.ts",
   "scripts": {
     "build": "",

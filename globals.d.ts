@@ -7,7 +7,10 @@ declare class DebugSymbol {
 }
 
 declare class Interceptor {
-    static attach(target: string, callbacks);
+    static attach(target: string, callbacks: {
+        onEnter: (args: [NativePointer])=>void;
+        onLeave: ()=>void;
+    });
 }
 
 declare class Process {
@@ -34,6 +37,20 @@ declare class Thread {
 
 
 declare class NativePointer {
+    readS8(): number;
+    readU8(): number;
+    readS16(): number;
+    readU16(): number;
+    readS32(): number;
+    readU32(): number;
+    readShort(): number;
+    readUShort(): number;
+    readInt(): number;
+    readUInt(): number;
+    readFloat(): number;
+    readDouble(): number;
+    readPointer(): NativePointer;
+    
     readCString(size:number): string;
 
     readUtf8String(size: number): string;
@@ -41,6 +58,8 @@ declare class NativePointer {
     readUtf16String(size: number): string;
 
     readAnsiString(size: number): string;
+    
+    isNull(): boolean;
 }
 
 
@@ -58,3 +77,4 @@ declare class Class {
 }
 
 declare function ptr(address: string);
+declare function send(obj: any);

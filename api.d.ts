@@ -1,42 +1,42 @@
-declare class Backtracer {
+class Backtracer {
     static ACCURATE
 }
 
-declare class DebugSymbol {
+class DebugSymbol {
     static fromAddress
 }
 
-declare class Interceptor {
+class Interceptor {
     static attach(target: string, callbacks: {
         onEnter: (args: [NativePointer])=>void;
         onLeave: ()=>void;
     });
 }
 
-declare class Process {
+class Process {
     id: number;
-    static enumerateModules(): Module[];
+    static enumerateModules(): Module[]{};
     static isDebuggerAttached(): boolean;
     static getCurrentThreadId(): number;
     static enumerateThreads(): [Thread];
     static findModuleByName(name: String): Module;
 }
 
-declare class Module {
+class Module {
     name: string;
     path: string;
     base: NativePointer;
     static findExportByName(moduleName: string, declareName: string): string
 }
 
-declare class Thread {
+class Thread {
     id: number;
     state: string;
     static backtrace(context, backtracer)
 }
 
 
-declare class NativePointer {
+class NativePointer {
     readS8(): number;
     readU8(): number;
     readS16(): number;
@@ -64,7 +64,7 @@ declare class NativePointer {
 
 
 // Java
-declare class Java {
+class Java {
     static perform(func);
     
     static use(pkg: String): Class;
@@ -72,9 +72,9 @@ declare class Java {
     static cast(obj, clazz: Class);
 }
 
-declare class Class {
+class Class {
 
 }
 
-declare function ptr(address: string);
-declare function send(obj: any);
+function ptr(address: string);
+function send(obj: any);

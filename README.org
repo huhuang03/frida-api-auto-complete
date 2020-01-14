@@ -1,11 +1,20 @@
 This is for auto complete for frida script
 
 * How to use
-add some thing like this in your =package.json= and then run =npm install= to install
+- add some thing like this in your =package.json= and then run =npm install= to install
 #+BEGIN_SRC json
 {
   "devDependencies": {
     "frida-api-auto-complte": "../../frida-api-auto-complete"
   }
+}
+#+END_SRC
+
+- config(create if not exists) your `tsconfig.json`
+#+BEGIN_SRC json
+{
+    "compilerOptions": {
+        "typeRoots": ["./node_modules/@types", "./node_modules/firda-api-auto-complete/global.d.ts"]
+    }
 }
 #+END_SRC

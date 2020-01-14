@@ -7,6 +7,7 @@
     "build": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "types": "global.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/huhuang03/frida-api-auto-complete.git"

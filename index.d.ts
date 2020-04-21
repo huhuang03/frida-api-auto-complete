@@ -70,6 +70,8 @@ declare class Java {
     static use(pkg: String): any;
 
     static cast(obj: any, clazz: Class): any;
+
+    static array(type: string, elements: any): any;
 }
 
 declare class Class {

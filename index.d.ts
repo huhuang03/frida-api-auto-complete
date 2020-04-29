@@ -62,12 +62,17 @@ declare class NativePointer {
     isNull(): boolean;
 }
 
+declare interface ClassNameWrapper {
+    $new(): any;
+    $dispose(): void;
+    [method: string]: any;
+}
 
 // Java
 declare class Java {
-    static perform(func: any): any;
+    static perform(func: any): void;
     
-    static use(pkg: String): any;
+    static use(pkg: String): ClassNameWrapper;
 
     static cast(obj: any, clazz: Class): any;
 

@@ -63,7 +63,7 @@ declare class NativePointer {
 }
 
 declare interface ClassNameWrapper {
-    $new(): any;
+    $new(...args: any[]): any;
     $dispose(): void;
     [method: string]: any;
 }

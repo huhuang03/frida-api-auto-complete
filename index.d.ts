@@ -62,6 +62,11 @@ declare class NativePointer {
     isNull(): boolean;
 }
 
+declare interface ObjectWrapper {
+    readonly value: any;
+    [fieldOrMethods: string]: any;
+}
+
 declare interface ClassNameWrapper {
     $new(...args: any[]): any;
     $dispose(): void;

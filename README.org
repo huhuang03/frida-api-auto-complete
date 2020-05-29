@@ -5,16 +5,7 @@ This is for auto complete for frida script
 #+BEGIN_SRC json
 {
   "devDependencies": {
-    "frida-api-auto-complte": "../../frida-api-auto-complete"
+    "@types/frida-script": "path_to_this_folder",
   }
-}
-#+END_SRC
-
-- config(create if not exists) your `tsconfig.json`
-#+BEGIN_SRC json
-{
-    "compilerOptions": {
-        "typeRoots": ["./node_modules/@types", "./node_modules/firda-api-auto-complete/global.d.ts"]
-    }
 }
 #+END_SRC

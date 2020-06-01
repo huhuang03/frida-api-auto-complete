@@ -85,8 +85,17 @@ declare class Java {
 }
 
 declare class Class {
+    [mehtod: string]: Method;
+}
 
+declare class Method {
+    overload(signature: string): Method;
+    implementation: () => void;
 }
 
 declare function ptr(address: string): any;
 declare function send(obj: any): any;
+
+declare function recv(type: string, data: any): void;
+
+declare var rpc: any;

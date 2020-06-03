@@ -67,7 +67,7 @@ declare interface ObjectWrapper {
     [fieldOrMethods: string]: any;
 }
 
-declare interface ClassNameWrapper {
+declare interface ClassWrapper {
     $new(...args: any[]): any;
     $dispose(): void;
     [method: string]: any;
@@ -77,7 +77,7 @@ declare interface ClassNameWrapper {
 declare class Java {
     static perform(func: any): void;
     
-    static use(pkg: String): ClassNameWrapper;
+    static use(pkg: String): ClassWrapper;
 
     static cast(obj: any, clazz: Class): any;
 
@@ -99,3 +99,7 @@ declare function send(obj: any): any;
 declare function recv(type: string, data: any): void;
 
 declare var rpc: any;
+
+declare class Promise<T> {
+    constructor(func: any) 
+}

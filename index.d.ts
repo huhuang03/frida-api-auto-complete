@@ -70,7 +70,7 @@ declare interface ObjectWrapper {
 declare interface ClassWrapper {
     $new(...args: any[]): any;
     $dispose(): void;
-    [method: string]: any;
+    [method: string]: Method | any;
 }
 
 // Java

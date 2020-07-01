@@ -1,7 +1,7 @@
 {
   "name": "@types/frida-script",
   "version": "1.0.0",
-  "description": "for frida script auto complte",
+  "description": "for frida script types",
   "scripts": {
     "build": "",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,13 +10,13 @@
   "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huhuang03/frida-api-auto-complete.git"
+    "url": "git+https://github.com/huhuang03/frida-script.types.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/huhuang03/frida-api-auto-complete/issues"
+    "url": "https://github.com/huhuang03/frida-script.types/issues"
   },
-  "homepage": "https://github.com/huhuang03/frida-api-auto-complete#readme"
+  "homepage": "https://github.com/huhuang03/frida-script.types#readme"
 }

@@ -19,7 +19,5 @@
     "url": "https://github.com/huhuang03/frida-script.types/issues"
   },
   "homepage": "https://github.com/huhuang03/frida-script.types#readme",
-  "dependencies": {
-    "user": "0.0.0"
-  }
+  "dependencies": {}
 }

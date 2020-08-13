@@ -7,9 +7,9 @@ declare class DebugSymbol {
 }
 
 declare class Interceptor {
-    static attach(target: string, callbacks: {
-        onEnter: (args: [NativePointer])=>void;
-        onLeave: ()=>void;
+    static attach(target: NativePointer, callbacks: {
+        onEnter?: (args: [NativePointer])=>void;
+        onLeave?: (retval?: any)=>void;
     }): any;
 }
 
@@ -26,7 +26,8 @@ declare class Module {
     name: string;
     path: string;
     base: NativePointer;
-    static findExportByName(moduleName: string, declareName: string): string
+    size: number;
+    static findExportByName(moduleName: string, declareName: string): NativePointer
 }
 
 declare class Thread {
@@ -37,6 +38,12 @@ declare class Thread {
 
 
 declare class NativePointer {
+    add(rhs: number|NativePointer): NativePointer;
+    sub(rhs: number|NativePointer): NativePointer;
+    and(rhs: number|NativePointer): NativePointer;
+    or(rhs: number|NativePointer): NativePointer;
+    xor(rhs: number|NativePointer): NativePointer;
+
     readS8(): number;
     readU8(): number;
     readS16(): number;
@@ -51,7 +58,7 @@ declare class NativePointer {
     readDouble(): number;
     readPointer(): NativePointer;
     
-    readCString(size:number): string;
+    readCString(size?:number): string;
 
     readUtf8String(size: number): string;
 
@@ -99,7 +106,3 @@ declare function send(obj: any): any;
 declare function recv(type: string, data: any): void;
 
 declare var rpc: any;
-
-declare class Promise<T> {
-    constructor(func: any) 
-}
